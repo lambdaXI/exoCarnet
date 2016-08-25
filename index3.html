@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css" charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" charset="utf-8">
+    <!-- angular -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <!-- loadingbar et routing -->
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+    <script src="angular-loading-bar-master/src/loading-bar.js"></script>
+    <link href='angular-loading-bar-master/src/loading-bar.css' rel='stylesheet' />
+    <style>
+      select {
+        display:block;
+      }
+      .buttonmenu{
+        border: 2px solid;
+         border-radius: 15px;
+          padding: 15px;
+           display:inline-block;
+
+      }
+      .buttonmenu:hover{
+        background-color: green;
+
+      }
+    </style>
+  </head>
+  <body ng-app="profil">
+    <div ng-view></div>
+
+
+
+
+    <!-- injection angular animate -->
+    <script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+    <!-- link ng-stats -->
+    <script src="ngstatmin/ng-stats.min.js"></script>
+
+    <!-- library moment -->
+    <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
+    <!-- library underscore -->
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!-- jquery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- materialize -->
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+    <!-- APP -->
+    <script src="App/app.js" charset="utf-8"></script>
+    <!-- routing -->
+    <script src="routing/route.js" charset="utf-8"></script>
+    <!-- mes filtres -->
+    <script src="filtre/filtre.js" charset="utf-8"></script>
+    <!-- mon module -->
+    <script src="Module/ModuleCanetMembre.js" charset="utf-8"></script>
+    <script src="Module/ModuleComment.js" charset="utf-8"></script>
+    <script src="Module/commmentaireFirebase.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        javascript: (function() {var a = document.createElement("script");a.src = "https://rawgit.com/kentcdodds/ng-stats/master/dist/ng-stats.js";a.onload=function(){window.showAngularStats()};document.head.appendChild(a)})();
+        $('.tooltipped').tooltip({delay: 50});
+        // This will remove the tooltip functionality for the buttons on this page
+        $('.tooltipped').tooltip('remove');
+      });</script>
+  </body>
+</html>

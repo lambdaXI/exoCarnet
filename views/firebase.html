@@ -1,0 +1,21 @@
+
+<div class="container">
+  <a href="#/" class="buttonmenu">Home</a>
+  <form ng-submit="ajoutComment()" style="width:50%; margin: 0 auto">
+    <input type="text" placeholder="name" ng-model="newComment.name"><br>
+    <input type="text" placeholder="id" ng-model="newComment.id"><br>
+    <input type="text" placeholder="postid" ng-model="newComment.postId"><br>
+    <input type="text" placeholder="email" ng-model="newComment.email"><br>
+    <input type="text" placeholder="body" ng-model="newComment.body">
+    <input type="submit" value="envoyer">
+  </form>
+
+  <ul>
+    <li ng-repeat="post in madatabase">
+      <h3>Id User : {{post.postId}}</h3>
+      <h4> titre du post: {{post.name}}</h4>
+      <p>{{post.body}}</p>
+      <button type="button" ng-click="spliceComment($index)">delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="progress" ng-show="loadingState">
+      <div class="indeterminate"></div>
+  </div>
+<div class="container" ng-hide="loadingState">
+  <a href="#/creercomments">creer comment</a>
+  <a href="#/firebasetest">firebase comment</a>
+    <div ng-repeat="post in mesComments">
+        <h3>Id User : {{post.postId}}</h3>
+        <h4> titre du post: {{post.name}}</h4>
+        <p>{{post.body}}</p>
+    </div>
+</div>
